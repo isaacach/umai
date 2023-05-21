@@ -1,6 +1,6 @@
-import './nav.css';
+import '../css/nav.css'
 
-function Nav() {
+export default function Nav() {
 
   return (
     <div className='container nav'>
@@ -21,4 +21,4 @@ function Nav() {
   )
 }
 
-export default Nav
+
