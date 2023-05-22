@@ -1,0 +1,13 @@
+.show-recipes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: #B5E5CF;
+}
+
+.recipe {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+}
