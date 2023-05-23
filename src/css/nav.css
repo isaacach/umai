@@ -9,8 +9,7 @@
 
 .links.nav {
   display: flex;
-  justify-content: space-between;
-  width: 200px;
+  column-gap: 35px;
   margin-right: 40px;
 }
 
@@ -21,9 +20,12 @@
   column-gap: 15px;
 }
 
+.logo.nav > img {
+  width: 55px;
+}
+
 a {
   font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
   cursor: pointer;
 }
