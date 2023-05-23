@@ -1,9 +1,9 @@
-html {
+body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #B99095;
+  background-color: rgb(209, 204, 204)
 }
 
 .page-wrapper {
@@ -12,18 +12,50 @@ html {
   min-height: 100vh;
   width: 100vw;
   align-items: center;
-  background-color: #B99095y;
 }
 
 .container {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 1200px;
+  width: 100vw;
 }
 
 .row {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search {
+  margin-bottom: 30px;
+}
+
+
+
+.search > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 30px;
+}
+
+.search-bar {
+  width: 350px;
+  height: 30px;
+  font-size: 20px;
+  padding: 5px;
+  background-color: darkorange;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 4px 4px 7px 1px rgb(51, 50, 50);
 }

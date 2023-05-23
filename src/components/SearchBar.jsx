@@ -14,9 +14,10 @@ export default function SearchBar({ onSubmit }) {
   }
 
     return (
-        <div>
+        <div className='search'>
             <form onSubmit={handleSubmit}>
-              <input onChange={handleChange} value={searchTerm} />
+              <h2>Search your favorite recipes</h2>
+              <input className='search-bar' onChange={handleChange} value={searchTerm} placeholder='Food...'/>
             </form>
         </div>
     )

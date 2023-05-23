@@ -8,6 +8,7 @@ export default function Nav() {
         <div className='col nav'>
           <div className='logo nav'>
             <h1>UMAI</h1>
+            <img src='./images/yummy.png' alt='yummy'/>
           </div>
         </div>
         <div className='col nav'>
