@@ -2,16 +2,15 @@
 import "../css/recipes.css";
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useState } from "react";
 
 export default function RecipeList({ recipes }) {
   const [open, setOpen] = useState(false);
   const [recipe, setRecipe] = useState({});
-  const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const handleShow = (e) => {  
+    setOpen(true);
     const recipe = recipes.find((recipe) => recipe.idMeal === e.target.key);
     setRecipe(recipe);
     console.log(recipe);
@@ -31,7 +30,6 @@ export default function RecipeList({ recipes }) {
 
   return (
     <>
-    <Button onClick={handleOpen}>Open modal</Button>
       <Modal
         open={open}
         onClose={handleClose}
