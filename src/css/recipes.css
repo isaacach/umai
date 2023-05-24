@@ -28,7 +28,13 @@
 .recipe-title {
   position: absolute;
   font-size: 24px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 320px;
   top: 240px;
   right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: white;
 }
