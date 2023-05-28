@@ -11,9 +11,8 @@ export default function RecipeList({ recipes }) {
   const handleClose = () => setOpen(false);
   const handleShow = (e) => {  
     setOpen(true);
-    const recipe = recipes.find((recipe) => recipe.idMeal === e.target.key);
+    const recipe = recipes.find((recipe) => recipe.idMeal == e.target.id);
     setRecipe(recipe);
-    console.log(recipe);
   }
 
   const style = {
@@ -33,8 +32,6 @@ export default function RecipeList({ recipes }) {
       <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
@@ -52,10 +49,14 @@ export default function RecipeList({ recipes }) {
           <div onClick={handleShow} className="recipe" key={recipe.idMeal}>
             <h3 className="recipe-title">{recipe.strMeal}</h3>
             <img
+              id={recipe.idMeal}
               className="recipe-img"
               src={recipe.strMealThumb}
               alt={recipe.strMeal}
             />
+            <div className="summary-wrapper">
+              <button className="summary">Quick Look</button>
+            </div>
           </div>
         );
       })}
