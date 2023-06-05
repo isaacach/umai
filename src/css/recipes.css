@@ -40,10 +40,14 @@
 
 .summary {
   position: absolute;
-  width: 100px;
-  height: 30px;
+  z-index: 0;
+  top: calc(50% - 23px);
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 46px;
   border-radius: 10px;
-  background-color: white;
-  border: none;
+  background-color: darkorange;
+  box-shadow: 3px 3px 1px black;
+  border: 1px solid black;
   cursor: pointer;
 }

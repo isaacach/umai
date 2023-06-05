@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import { useState } from "react";
+import { Zoom } from "react-awesome-reveal";
 
 export default function RecipeList({ recipes }) {
   const [open, setOpen] = useState(false);
@@ -44,9 +45,10 @@ export default function RecipeList({ recipes }) {
       </Modal>
       
     <div className="show-recipes">
+      <Zoom cascade duration={200}>
       {recipes.map((recipe) => {
         return (
-          <div onClick={handleShow} className="recipe" key={recipe.idMeal}>
+          <div className="recipe" key={recipe.idMeal}>
             <h3 className="recipe-title">{recipe.strMeal}</h3>
             <img
               id={recipe.idMeal}
@@ -55,11 +57,12 @@ export default function RecipeList({ recipes }) {
               alt={recipe.strMeal}
             />
             <div className="summary-wrapper">
-              <button className="summary">Quick Look</button>
+              <button className="summary" onClick={handleShow} id={recipe.idMeal}>Quick Look</button>
             </div>
           </div>
         );
       })}
+      </Zoom>
     </div>
     </>
   );
