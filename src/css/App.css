@@ -63,9 +63,13 @@ body {
   box-shadow: 4px 4px 7px 1px rgb(51, 50, 50);
 }
 
-.search-icons > img {
+.icon {
   width: 60px;
   cursor: pointer;
+}
+
+.popup {
+  display: none;
 }
 
 .chopsticks1 {

@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   width: 350px;
   height: 350px;
   border: 1px solid black;
@@ -19,13 +20,19 @@
 }
 
 .recipe-img {
-  height: 330px;
+  height: 350px;
   object-fit: contain;
   border-radius: 14px;
+  transition: all .2s ease;
+}
+
+.recipe-img:hover {
+  scale: 1.1;
 }
 
 .recipe-title {
   position: absolute;
+  z-index: 99;
   font-size: 24px;
   overflow: hidden;
   white-space: nowrap;
@@ -38,16 +45,48 @@
   background-color: white;
 }
 
+.summary-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .summary {
   position: absolute;
   z-index: 0;
-  top: calc(50% - 23px);
-  left: calc(50% - 100px);
-  width: 200px;
-  height: 46px;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
   background-color: darkorange;
   box-shadow: 3px 3px 1px black;
   border: 1px solid black;
   cursor: pointer;
+}
+
+.hoverinfo {
+  display: none;
+}
+
+.summary:hover ~ .hoverinfo {
+  position: absolute;
+  z-index: 99;
+  width: 85px;
+  height: 30px;
+  top: 70px;
+  left: 60px;
+  font-size: 15px;
+  font-weight: 700;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 1px black;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s ease-in;
+}
+
+.summary:hover ~ .recipe-img {
+  scale: 1.1;
 }
