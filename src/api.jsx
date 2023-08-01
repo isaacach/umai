@@ -12,3 +12,10 @@ export const searchRecipesById = async (id) => {
   console.log(data);
 }
 
+export const searchRecipesByCategory = async (category) => {
+  const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
+  const data = await response.json();
+  console.log(data);
+  return data.meals;
+}
+

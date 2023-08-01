@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 
-export default function SearchBar({ onSubmit }) {
+export default function SearchBar({ onSubmit, onClick }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   const [icon, setIcon] = useState("");
@@ -17,7 +17,7 @@ export default function SearchBar({ onSubmit }) {
 
   const handleClick = (e) => {
     setIcon(e.target.alt);
-    console.log(icon);
+    onClick(icon);
   };
 
   return (
@@ -36,7 +36,7 @@ export default function SearchBar({ onSubmit }) {
               className="icon"
               onClick={handleClick}
               src="src/images/breakfast.png"
-              alt="breakfast"
+              alt="Breakfast"
             />
             <span className="popup">Breakfast</span>
           </div>
@@ -45,7 +45,7 @@ export default function SearchBar({ onSubmit }) {
               className="icon"
               onClick={handleClick}
               src="src/images/entree.png"
-              alt="entree"
+              alt="Entree"
             />
             <span className="popup">Entree</span>
           </div>
@@ -54,7 +54,7 @@ export default function SearchBar({ onSubmit }) {
               className="icon"
               onClick={handleClick}
               src="src/images/side.png"
-              alt="side"
+              alt="Side"
             />
             <span className="popup">Side</span>
           </div>
@@ -63,7 +63,7 @@ export default function SearchBar({ onSubmit }) {
               className="icon"
               onClick={handleClick}
               src="src/images/meat.png"
-              alt="meat"
+              alt="Meat"
             />
             <span className="popup">Meat</span>
           </div>
@@ -72,7 +72,7 @@ export default function SearchBar({ onSubmit }) {
               className="icon"
               onClick={handleClick}
               src="src/images/pasta.png"
-              alt="pasta"
+              alt="Pasta"
             />
             <span className="popup">Pasta</span>
           </div>
@@ -81,7 +81,7 @@ export default function SearchBar({ onSubmit }) {
               className="icon"
               onClick={handleClick}
               src="src/images/seafood.png"
-              alt="seafood"
+              alt="Seafood"
             />
             <span className="popup">Seafood</span>
           </div>
@@ -90,7 +90,7 @@ export default function SearchBar({ onSubmit }) {
               className="icon"
               onClick={handleClick}
               src="src/images/vegetarian.png"
-              alt="vegetarian"
+              alt="Vegetarian"
             />
             <span className="popup">Vegetarian</span>
           </div>
@@ -99,7 +99,7 @@ export default function SearchBar({ onSubmit }) {
               className="icon"
               onClick={handleClick}
               src="src/images/vegan.png"
-              alt="vegan"
+              alt="Vegan"
             />
             <span className="popup">Vegan</span>
           </div>
@@ -108,7 +108,7 @@ export default function SearchBar({ onSubmit }) {
               className="icon"
               onClick={handleClick}
               src="src/images/dessert.png"
-              alt="dessert"
+              alt="Dessert"
             />
             <span className="popup">Dessert</span>
           </div>
@@ -117,7 +117,7 @@ export default function SearchBar({ onSubmit }) {
               className="icon"
               onClick={handleClick}
               src="src/images/miscellaneous.png"
-              alt="miscellaneous"
+              alt="Miscellaneous"
             />
             <span className="popup">Miscellaneous</span>
           </div>

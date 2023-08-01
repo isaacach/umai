@@ -3,8 +3,9 @@ import './css/resets.css'
 import './css/App.css';
 import Nav from './components/Nav';
 import SearchBar from './components/SearchBar';
-import { searchRecipes } from './api';
+import { searchRecipes, searchRecipesByCategory } from './api';
 import RecipeList from './components/RecipeList';
+
 
 export default function App() {
 
@@ -16,13 +17,18 @@ export default function App() {
     setRecipes(result);
   }
 
+  const handleClick = async (icon) => {
+    const result = await searchRecipesByCategory(icon);
+    setRecipes(result);
+  }
+
   return (
     <div className="page-wrapper">
       <Nav />
       <div className="container main">
         <div className="row main">
           <div className="col main">
-            <SearchBar onSubmit={handleSubmit} />
+            <SearchBar onSubmit={handleSubmit} onClick={handleClick} />
             <RecipeList recipes={recipes} />
           </div>
         </div>

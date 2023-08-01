@@ -49,6 +49,7 @@
 .summary-wrapper {
   position: relative;
   position: absolute;
+  width: 40px;
   top: 0;
   left: 0;
 }
@@ -58,8 +59,8 @@
   z-index: 0;
   top: 20px;
   left: 20px;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
   background-color: darkorange;
   box-shadow: 3px 3px 1px black;
@@ -72,8 +73,8 @@
   z-index: 99;
   width: 85px;
   height: 25px;
-  top: 70px;
-  left: 60px;
+  top: 60px;
+  left: 40px;
   font-size: 15px;
   font-weight: 700;
   text-align: center;
@@ -83,7 +84,7 @@
   border: 1px solid black;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .2s ease-in;
+  transition: opacity .1s ease-in;
 }
 
 .summary:hover ~ .hoverinfo {
