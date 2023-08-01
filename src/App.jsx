@@ -21,16 +21,6 @@ export default function App() {
       <div className="container main">
         <div className="row main">
           <div className="col main">
-            {/* <img
-              className="chopsticks1"
-              src="src/images/chopsticks.png"
-              alt="chopsticks"
-            />
-            <img
-              className="chopsticks2"
-              src="src/images/chopsticks2.png"
-              alt="chopsticks"
-            /> */}
             <SearchBar onSubmit={handleSubmit} />
             <RecipeList recipes={recipes} />
           </div>

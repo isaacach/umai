@@ -43,13 +43,16 @@
   padding-left: 10px;
   padding-right: 10px;
   background-color: white;
+  pointer-events: none;
 }
 
 .summary-wrapper {
+  position: relative;
   position: absolute;
   top: 0;
   left: 0;
 }
+
 .summary {
   position: absolute;
   z-index: 0;
@@ -65,26 +68,26 @@
 }
 
 .hoverinfo {
-  display: none;
-}
-
-.summary:hover ~ .hoverinfo {
   position: absolute;
   z-index: 99;
   width: 85px;
-  height: 30px;
+  height: 25px;
   top: 70px;
   left: 60px;
   font-size: 15px;
   font-weight: 700;
+  text-align: center;
   background-color: white;
   border-radius: 10px;
   box-shadow: 3px 3px 1px black;
   border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all .3s ease-in;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease-in;
+}
+
+.summary:hover ~ .hoverinfo {
+  opacity: 1;
 }
 
 .summary:hover ~ .recipe-img {
