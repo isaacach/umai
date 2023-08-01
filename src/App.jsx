@@ -3,7 +3,7 @@ import "./css/resets.css";
 import "./css/App.css";
 import Nav from "./components/Nav";
 import SearchBar from "./components/SearchBar";
-import { searchRecipes, searchRecipesByCategory } from "./api";
+import { searchRecipes, searchRecipesByCategory, searchRecipesById } from "./api";
 import RecipeList from "./components/RecipeList";
 
 export default function App() {
@@ -18,11 +18,16 @@ export default function App() {
   const handleClick = async (icon) => {
     if (icon !== "") {
       const result = await searchRecipesByCategory(icon);
-      console.log(icon);
-      console.log(result);
-      setRecipes(result);
+      const recipeArray = [];
+      for (const recipeResult of result) {
+        const recipe = await searchRecipesById(recipeResult.idMeal);
+        recipeArray.push(recipe);
+      }
+      setRecipes(recipeArray);
+      console.log(recipeArray);
     }
   };
+
 
   return (
     <div className="page-wrapper">
