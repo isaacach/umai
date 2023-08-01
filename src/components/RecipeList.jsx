@@ -9,7 +9,9 @@ import { Fade } from "react-awesome-reveal";
 export default function RecipeList({ recipes }) {
   const [open, setOpen] = useState(false);
   const [recipe, setRecipe] = useState({});
+
   const handleClose = () => setOpen(false);
+  
   const handleShow = (e) => {  
     setOpen(true);
     const recipe = recipes.find((recipe) => recipe.idMeal == e.target.id);
@@ -45,7 +47,7 @@ export default function RecipeList({ recipes }) {
       </Modal>
       
     <div className="show-recipes">
-      <Fade cascade duration={200} fraction={0.8} triggerOnce>
+      <Fade cascade duration={200} triggerOnce>
       {recipes.map((recipe) => {
         return (
           <div className="recipe" key={recipe.idMeal}>

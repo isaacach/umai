@@ -16,7 +16,9 @@ export default function SearchBar({ onSubmit, onClick }) {
   };
 
   const handleClick = (e) => {
+    console.log(e.target.alt);
     setIcon(e.target.alt);
+    console.log(icon);
     onClick(icon);
   };
 
