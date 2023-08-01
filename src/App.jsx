@@ -21,7 +21,7 @@ export default function App() {
       <div className="container main">
         <div className="row main">
           <div className="col main">
-            <img
+            {/* <img
               className="chopsticks1"
               src="src/images/chopsticks.png"
               alt="chopsticks"
@@ -30,7 +30,7 @@ export default function App() {
               className="chopsticks2"
               src="src/images/chopsticks2.png"
               alt="chopsticks"
-            />
+            /> */}
             <SearchBar onSubmit={handleSubmit} />
             <RecipeList recipes={recipes} />
           </div>

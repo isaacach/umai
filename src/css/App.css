@@ -31,6 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .title {
@@ -63,13 +64,40 @@ body {
   box-shadow: 4px 4px 7px 1px rgb(51, 50, 50);
 }
 
+.search-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.icon-wrapper {
+  position: relative;
+}
+
 .icon {
   width: 60px;
   cursor: pointer;
+  transition: all .2s ease;
 }
 
 .popup {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: .1rem;
+  background-color: black;
+  color: white;
+  border-bottom: 1px solid darkorange;
+  padding-inline: 10px;
+  transition: all .2s ease;
+}
+
+.icon:hover ~ .popup {
+  font-size: .9rem;
+  opacity: 1;
+  transition: all .2s ease;
 }
 
 .chopsticks1 {
