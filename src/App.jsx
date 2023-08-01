@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './css/resets.css'
 import './css/App.css';
 import Nav from './components/Nav';
 import SearchBar from './components/SearchBar';

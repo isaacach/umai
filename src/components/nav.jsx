@@ -3,7 +3,7 @@ import '../css/nav.css'
 export default function Nav() {
 
   return (
-    <div className='container nav'>
+    <nav >
       <div className='row nav'>
         <div className='col nav'>
           <div className='logo nav'>
@@ -20,7 +20,7 @@ export default function Nav() {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   )
 }
 

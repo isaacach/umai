@@ -28,7 +28,7 @@ export default function SearchBar({ onSubmit }) {
           className="search-bar"
           onChange={handleChange}
           value={searchTerm}
-          placeholder="Food..."
+          placeholder="food..."
         />
         <div className="search-icons">
           <div className="icon-wrapper">

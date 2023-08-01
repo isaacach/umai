@@ -14,7 +14,8 @@ body {
   align-items: center;
 }
 
-.container {
+.container.main {
+  margin-top: 130px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -54,9 +55,9 @@ body {
 
 .search-bar {
   width: 350px;
-  height: 30px;
+  height: 35px;
   font-size: 20px;
-  padding: 5px;
+  padding: 8px;
   background-color: darkorange;
   outline: none;
   border: 2px solid black;

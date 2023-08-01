@@ -1,9 +1,16 @@
-.row.nav {
-  justify-content: space-between;
-  align-items: center;
-  background: darkorange;
+nav {
+  width: 100vw;
+  height: 70px;
   position: fixed;
+  z-index: 999;
   top: 0;
+  background: darkorange;
+}
+
+.row.nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .col.nav:first-child {
