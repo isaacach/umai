@@ -1,45 +1,20 @@
-import { useState } from "react";
-import "./css/resets.css";
-import "./css/App.css";
-import Nav from "./components/Nav";
-import SearchBar from "./components/SearchBar";
-import { searchRecipes, searchRecipesByCategory, searchRecipesById } from "./api";
-import RecipeList from "./components/RecipeList";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Nav from "./components/Nav.jsx";
+import Home from "./components/Home.jsx";
+import About from "./components/About.jsx";
+import Contact from "./components/Contact.jsx";
+import Favorites from "./components/Favorites.jsx";
 
 export default function App() {
-  const [recipes, setRecipes] = useState([]);
-
-  const handleSubmit = async (searchTerm) => {
-    const result = await searchRecipes(searchTerm);
-    console.log(result);
-    setRecipes(result);
-  };
-
-  const handleClick = async (icon) => {
-    if (icon !== "") {
-      const result = await searchRecipesByCategory(icon);
-      const recipeArray = [];
-      for (const recipeResult of result) {
-        const recipe = await searchRecipesById(recipeResult.idMeal);
-        recipeArray.push(await recipe);
-      }
-      setRecipes(recipeArray);
-      console.log(recipes);
-    }
-  };
-
-
   return (
-    <div className="page-wrapper">
-      <Nav />
-      <div className="container main">
-        <div className="row main">
-          <div className="col main">
-            <SearchBar onSubmit={handleSubmit} onClick={handleClick} />
-            <RecipeList recipes={recipes} />
-          </div>
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Nav />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contacts" element={<Contact />} />
+        <Route path="/favorites" element={<Favorites />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
