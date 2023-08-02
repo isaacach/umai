@@ -21,10 +21,10 @@ export default function App() {
       const recipeArray = [];
       for (const recipeResult of result) {
         const recipe = await searchRecipesById(recipeResult.idMeal);
-        recipeArray.push(recipe);
+        recipeArray.push(await recipe);
       }
       setRecipes(recipeArray);
-      console.log(recipeArray);
+      console.log(recipes);
     }
   };
 
