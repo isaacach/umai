@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import '../css/nav.css'
+import LoginButton from './LoginButton'
 
 export default function Nav() {
   let navigate = useNavigate()
@@ -18,6 +19,7 @@ export default function Nav() {
             <a onClick={() => navigate('/about')}><h3>About</h3></a>
             <a onClick={() => navigate('/favorites')}><h3>Favorites</h3></a>
             <a onClick={() => navigate('/contact')}><h3>Contact</h3></a>
+            <LoginButton />
           </div>
         </div>
       </div>

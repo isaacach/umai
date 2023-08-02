@@ -4,6 +4,7 @@ import Home from "./components/Home.jsx";
 import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx";
 import Favorites from "./components/Favorites.jsx";
+import Login from "./components/Login.jsx";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contacts" element={<Contact />} />
         <Route path="/favorites" element={<Favorites />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
