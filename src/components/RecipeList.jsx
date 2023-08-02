@@ -13,12 +13,14 @@ export default function RecipeList({ recipes }) {
   const handleClose = () => setOpen(false);
 
   const handleShow = (e) => {
-    if (recipe.meals.length > 0) {
+    if (recipes[0].meals) {
+      setOpen(true);
       const recipe = recipes.find(
         (recipe) => recipe.meals[0].idMeal == e.target.id
       );
-      setRecipe(recipe);
-    } else {
+      setRecipe(recipe.meals[0]);
+    } 
+    if (recipes[0].idMeal){
       setOpen(true);
       const recipe = recipes.find((recipe) => recipe.idMeal == e.target.id);
       setRecipe(recipe);
@@ -42,12 +44,10 @@ export default function RecipeList({ recipes }) {
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            {recipe.strMeal ? recipe.strMeal : recipe.meals[0].strMeal}
+            {recipe.strMeal}
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            {recipe.strInstructions
-              ? recipe.strInstructions
-              : recipe.meals[0].strInstructions}
+            {recipe.strInstructions}
           </Typography>
         </Box>
       </Modal>
