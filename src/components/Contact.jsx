@@ -13,9 +13,7 @@ export default function Contact() {
               umai@umai.com.
             </p>
           </div>
-          <div className="contact-img">
-            <img src="src/images/umai.png" alt="umai" />
-          </div>
+          
         </div>
       </div>
     </div>

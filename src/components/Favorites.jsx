@@ -12,9 +12,7 @@ export default function Favorites() {
               favorites
             </p>
           </div>
-          <div className="favorites-img">
-            <img src="src/images/umai.png" alt="umai" />
-          </div>
+          
         </div>
       </div>
     </div>

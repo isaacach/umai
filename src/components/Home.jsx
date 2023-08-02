@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./css/resets.css";
-import "./css/App.css";
+import "../css/resets.css";
+import "../css/App.css";
 import Nav from "./Nav";
 import SearchBar from "./SearchBar";
 import { searchRecipes, searchRecipesByCategory, searchRecipesById } from "../api";

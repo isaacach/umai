@@ -8,8 +8,8 @@ import Favorites from "./components/Favorites.jsx";
 export default function App() {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
-        <Nav />
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contacts" element={<Contact />} />

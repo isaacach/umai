@@ -14,10 +14,6 @@ export default function About() {
               powered by the Spoonacular API.
             </p>
           </div>
-          <div className="about-img">
-
-            <img src="src/images/umai.png" alt="umai" />
-          </div>
         </div>
       </div>
     </div>
