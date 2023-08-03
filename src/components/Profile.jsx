@@ -5,7 +5,11 @@ const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
   if (isLoading) {
-    return <div>Loading ...</div>;
+    return (
+      <div className="profile-wrapper">
+        <div>Loading ...</div>
+      </div>
+    );
   }
 
   return (

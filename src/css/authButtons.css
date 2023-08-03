@@ -1,0 +1,13 @@
+button {
+    background-image: linear-gradient(to right, var(--accent-color), var(--secondary-color) 70%);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 90px;
+    height: 30px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px 1px rgb(51, 50, 50);
+
+}
