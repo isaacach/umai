@@ -3,12 +3,14 @@ import "../css/recipes.css";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
-import { useState } from "react";
+import { useState, useNavigate } from "react";
 import { Fade } from "react-awesome-reveal";
 
 export default function RecipeList({ recipes }) {
   const [open, setOpen] = useState(false);
   const [recipe, setRecipe] = useState({});
+
+  const navigate = useNavigate();
 
   const handleClose = () => setOpen(false);
 
@@ -26,6 +28,11 @@ export default function RecipeList({ recipes }) {
       setRecipe(recipe);
     }
   };
+
+  const handleGoToRecipe = () => {
+    navigate(`/recipe/${recipe.idMeal}`);
+  };
+
 
   const style = {
     position: "absolute",
@@ -48,6 +55,9 @@ export default function RecipeList({ recipes }) {
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             {recipe.strInstructions}
+          </Typography>
+          <Typography>
+            <button onClick={handleGoToRecipe}>Go to recipe</button>
           </Typography>
         </Box>
       </Modal>

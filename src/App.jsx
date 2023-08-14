@@ -6,8 +6,12 @@ import Contact from "./components/Contact.jsx";
 import Favorites from "./components/Favorites.jsx";
 import Login from "./components/Login.jsx";
 import Profile from "./components/Profile.jsx";
+import RecipePage from "./components/RecipePage.jsx";
 
 export default function App() {
+  const [recipe, setRecipe] = useState({});
+
+ 
   return (
     <BrowserRouter>
       <Nav />
@@ -18,6 +22,7 @@ export default function App() {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="recipe-page/:id" element={<RecipePage recipe={recipe} />} />
       </Routes>
     </BrowserRouter>
   );
